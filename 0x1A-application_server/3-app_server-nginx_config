@@ -46,3 +46,8 @@ server {
                 root /etc/nginx/html;
                 internal;
         }
+	location /airbnb-dynamic/number_odd_or_even/ {
+		rewrite ^/airbnb-dynamic/number_odd_or_even/(.*)$ /number_odd_or_even/$1 break;
+		proxy_pass http://localhost:5001;
+	}
+}
