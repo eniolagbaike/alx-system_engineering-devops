@@ -1,0 +1,24 @@
+https://imgur.com/a/6QzhMy5
+Server - Is located in a data center i.e (a facility that houses thousands of server, processes and stores data.) A server is a software, physical device or OS (Operating System) that provides functionalities for "Clients".
+
+Domain Name - Is simply a name given in human readable text that can be translated by a DNS to an IP Address understood by the Web server. The role of the Domain Name is an identifier to the website.
+
+"www" - Is an authorative DNS record and simply identifies that a domain name is part of the web. In the case of a high traffic webpage, it helps save bandwith due to load balancing and seperate several process. It also helps with subdomain purposes and cookie loading.
+
+Web Server - Is a software that communicates with the Internet via HTTP, accepts requests, processes them and returns static web content to the client.
+
+Application Server - processes HTTP requests that cannot be handled by the Web server in conjuction with your Business Logic and Database then returns Dynamic web content i.e changes,updates and/is dependent on the input of the client.
+
+DataBase- Is a collected of well structured data. The role of the databases is to store, update, processess and provide data as per request of the Application Server.
+
+The Server communicates with the computer using HTTP (HyperText Transfer Protocol).
+
+ISSUES WITH INFRASTRUCTURE 
+SPOF - Formally known as Single Point of Failure, which simple means if there is an issue with one component of our structure, the whole system will fail.
+This issue can however be solved by Redundancy (i.e backup/replacements on standby incase of an unseen issue.)
+
+Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+	There are no alternative or backup solutions available with this structure,so automatically when maintenance is necessary, your web server will experience downtine and clients will have no access.
+
+Cannot scale if too much incoming traffic;
+	Scalabilty is a very important feauture of a web infrastructure. When there is high traffic, the load becomes to much for your server to handle at once and can cause an increase in load time of HTTP requests. This can be solved by load balancing.

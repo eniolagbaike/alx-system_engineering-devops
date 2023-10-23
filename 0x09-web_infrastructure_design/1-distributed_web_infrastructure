@@ -1,0 +1,18 @@
+https://imgur.com/Ybfc4ZM
+1 load-balancer (HAproxy); is a network solution to help distribute traffic across your servers. It provides high availability at the network (TCP) and application (HTTP/S) layers and increases speed and performance.
+
+The Load balancer uses the Round Robin Algorithm which distributes HTTP requests sequentially across all server and repeats the loop from top to bottom.
+
+Round Robin Algorithm enables the Active-Active Setup, which essentialy means both servers are running and accepting HTTP requests sequentially to avoid overload of one node. 
+Whereas, in an Active- Passive Setup, only one node ia active while the other acts as a backup or standby incase of SPOF.
+
+In a Primary-Replica(Master-Slave) cluster; The master does the writing while the slave database base acts as the backup. All requests first go throught the master, then sends reading operations across multiple slaves.
+
+The Primary node accepts requests, while the Replica node is a slave to the primary node and fetches results bases on Primary Node request.
+
+PROBLEMS  WITH THIS INFRASTRUCTURE;
+SPOF; When there is an overload of requests, the nodes maynot process requests fast enough in other to accept new ones, this can result in SPOF of the Load Balancer.
+
+NO HTTPS, NO FIREWALLS; There is no encryption in connection so therefore your network can be easily compromised.
+
+NO MONITORING; As the popular saying goes you cannot improve what you cannot measure. When there is no monitoring, it is hard to predict problems from SPOF or slow loading webpages
